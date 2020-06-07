@@ -482,8 +482,14 @@ body {
 .clients-list {
   width: 170px;
   height: 90px;
+}
+
+.clients-list > a {
+  display: inline-block;
   border: 1px solid #afb1b8;
   border-radius: 5px;
+  margin: 0;
+  padding: 0;
 }
 
 /* ==========Отступы иконок SVG============= */
@@ -515,15 +521,26 @@ body {
   fill: #afb1b8;
 }
 
+/* Рахзмеры ссылок клиентов */
+.clients-link {
+  width: 170px;
+  height: 90px;
+}
+
+/* Ховер на ссылку Клиентов */
+.clients-link:hover {
+  fill: var(--accent-color-blue);
+  border: 1px solid var(--accent-color-blue);
+}
 /* Hover для иконок клиентов */
 .icon-client:hover {
   fill: var(--accent-color-blue);
 }
 
 /* Hover для border li */
-.clients-list:hover {
+/* .clients-list:hover {
   border: 1px solid var(--accent-color-blue);
-}
+} */
 
 /* Правый отступ списка компаний */
 .clients-list:not(:last-child) {
