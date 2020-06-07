@@ -484,17 +484,24 @@ body {
   height: 90px;
 }
 
-.clients-list > a {
+/* Стили ссылки на компании Пост. клиентов */
+.clients-link {
   display: inline-block;
   border: 1px solid #afb1b8;
   border-radius: 5px;
   margin: 0;
   padding: 0;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Стили SVG иконок */
 .icon-client {
   fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Рахзмеры ссылок клиентов */
@@ -506,10 +513,9 @@ body {
 /* Ховер на ссылку Клиентов */
 .clients-link:hover,
 .clients-link:focus {
-  fill: var(--accent-color-blue);
   border: 1px solid var(--accent-color-blue);
 }
-/* Hover для иконок клиентов */
+/* Hover для иконок клиентов ==================НЕ РАБОТАЕТ ФОКУС НА ИКОНКАХ SVG*/
 .icon-client:hover {
   fill: var(--accent-color-blue);
 }
