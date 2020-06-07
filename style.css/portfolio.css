@@ -24,8 +24,8 @@ header {
   margin-top: 28px;
 }
 
-/* Примеры работ Стили ссылок Фильтров */
-.filer {
+/* Стили ссылок ==================Фильтры======================= */
+.filter {
   padding-left: 22px;
   padding-right: 22px;
   padding-top: 6px;
@@ -42,6 +42,9 @@ header {
     0px 3px 1px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   display: inline-block;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Отступы секции Примеры работ */
@@ -89,7 +92,15 @@ header {
 .filter-list:not(:last-child) {
   margin-right: 8px;
 }
-/* Флекс бокс с примерами работ */
+
+/* Интерактивные действия с фильтрами*/
+.filter:hover,
+.filter:focus {
+  color: var(--white-bg-color);
+  background-color: var(--accent-color-blue);
+}
+
+/* Флекс бокс с примерами работ=========ПРИМЕРЫ РАБОТ============*/
 .works-box {
   display: flex;
   flex-wrap: wrap;
@@ -164,13 +175,6 @@ header {
 .hidden-opacityBox {
   width: calc((1170px - 60px) / 3);
   height: 110px;
-}
-
-/* Интерактивные действия с фильтрами*/
-.filer:hover,
-.filer:focus {
-  color: var(--white-bg-color);
-  background-color: var(--accent-color-blue);
 }
 
 /* Интерактивные действия с карточками  */
