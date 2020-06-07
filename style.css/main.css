@@ -487,9 +487,9 @@ body {
 }
 
 /* ==========Отступы иконок SVG============= */
-.company-1 {
+/* .company-1 {
   margin-top: 20px;
-}
+} */
 
 .company-2 {
   margin-top: 19px;
@@ -690,13 +690,13 @@ footer {
   font-size: 16px;
   line-height: 1.9;
   margin-left: 12px;
-  padding-top: 10px; /*       new   */
-  padding-bottom: 10px; /*    new   */
-  padding-left: 29px; /*      new   */
-  text-decoration: none; /*   new   */
-  display: inline-flex; /*    new   */
-  cursor: pointer; /*         new   */
-  align-items: center; /*     new   */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  text-decoration: none;
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
 }
 
 .footer .button::after {
