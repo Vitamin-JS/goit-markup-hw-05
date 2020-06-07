@@ -146,10 +146,13 @@ body {
   margin-right: 50px;
 }
 
-/* Цвет контактов в навигации и футере */
+/* Цвет контактов + анимация в навигации и футере */
 .contacts {
   color: var(--primary-text-color);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Навигация флекс-бокс контакты */
@@ -185,6 +188,14 @@ body {
   background: var(--accent-color-blue);
   border-radius: 2px;
   margin-top: 28px;
+}
+
+/* Ховер+ анимация меню навигации */
+.logo.hover-text:hover,
+.logo.hover-text:focus,
+.contacts.hover-text:hover,
+.contacts.hover-text:focus {
+  color: var(--accent-color-blue);
 }
 
 .current {
@@ -717,12 +728,6 @@ footer {
   text-align: center;
   margin-bottom: 21px;
   margin-top: 0;
-}
-
-/* Интерактивные действия */
-.logo.hover-text:hover,
-.logo.hover-text:focus {
-  color: var(--accent-color-blue);
 }
 
 /* Фокус для лого ========================НЕ РАБОТАЕТ ФОКУС ЛОГО ФУТЕРА */
