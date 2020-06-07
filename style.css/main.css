@@ -69,6 +69,9 @@ body {
 .logo {
   color: var(--secondary-text-color);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Синий цвет лого */
@@ -631,6 +634,9 @@ footer {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Стили svg иконок */
@@ -714,8 +720,8 @@ footer {
 }
 
 /* Интерактивные действия */
-.hover-text:hover,
-.hover-text:focus {
+.logo.hover-text:hover,
+.logo.hover-text:focus {
   color: var(--accent-color-blue);
 }
 
