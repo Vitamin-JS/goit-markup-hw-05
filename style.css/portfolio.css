@@ -24,7 +24,7 @@ header {
   margin-top: 28px;
 }
 
-/* Стили ссылок ==================Фильтры======================= */
+/* Стили ссылок =======================  ФИЛЬТРЫ  ============== */
 .filter {
   padding-left: 22px;
   padding-right: 22px;
@@ -47,7 +47,33 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Отступы секции Примеры работ */
+/* Оступы фильтра */
+.filter-list {
+  display: block;
+}
+
+/* Правый отступ фильтров */
+.filter-list:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Отступы фильтров */
+.works-filter-ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Интерактивные действия с фильтрами*/
+.filter:hover,
+.filter:focus {
+  color: var(--white-bg-color);
+  background-color: var(--accent-color-blue);
+}
+
+/* Отступы секции Примеры работ=============ПРИМЕРЫ РАБОТ========== */
 .works {
   padding-top: 93px;
   padding-bottom: 94px;
@@ -72,35 +98,10 @@ header {
 
 .examples {
   text-decoration: none;
+  overflow: hidden;
 }
 
-/* Отступы фильтров */
-.works-filter-ul {
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Оступы фильтра */
-.filter-list {
-  display: block;
-}
-
-/* Правый отступ фильтров */
-.filter-list:not(:last-child) {
-  margin-right: 8px;
-}
-
-/* Интерактивные действия с фильтрами*/
-.filter:hover,
-.filter:focus {
-  color: var(--white-bg-color);
-  background-color: var(--accent-color-blue);
-}
-
-/* Флекс бокс с примерами работ=========ПРИМЕРЫ РАБОТ============*/
+/* Флекс бокс с примерами работ*/
 .works-box {
   display: flex;
   flex-wrap: wrap;
@@ -111,6 +112,7 @@ header {
   margin-top: 30px;
   width: calc((1170px - 60px) / 3);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .work-list:not(:nth-child(3n)) {
@@ -136,26 +138,34 @@ header {
   overflow: hidden;
 }
 
+/* Скрытый блок на карточке */
+.hidden-box {
+  position: absolute;
+  opacity: 0.9;
+  margin: 0;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  overflow: hidden;
+  transform: translateY(0%); /* 294px*/
+  transition-property: transform, opacity;
+  transition-duration: 250ms, 1250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1),
+    cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
 /* Бордеры и отступы контента карточек работ */
 .card-content {
+  position: relative;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: var(--white-bg-color);
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-/* Скрытый блок на карточке */
-.hidden-box {
-  position: absolute;
-  opacity: 0;
-  margin: 0;
-  border-radius: 5px;
-  overflow: hidden;
+  z-index: 2;
 }
 
 /* Текст в скрытом блоке на карточке */
@@ -171,15 +181,12 @@ header {
   margin: 0;
 }
 
-/* Прозрачный блок под скрытым текстом  */
-.hidden-opacityBox {
-  width: calc((1170px - 60px) / 3);
-  height: 110px;
+/* Интерактивные действия с карточками  */
+.work-list:hover .hidden-box {
+  transform: translateY(-100%);
 }
 
-/* Интерактивные действия с карточками  */
-.hidden-box:hover {
-  opacity: 0.9;
+.work-list:hover .card-content {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
