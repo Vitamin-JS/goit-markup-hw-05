@@ -106,13 +106,14 @@ header {
   display: flex;
   flex-wrap: wrap;
 }
-/* Отступы примеров работ */
+/* Св-ва єлемента списка примеров работ  li*/
 .work-list {
   position: relative;
   margin-top: 30px;
   width: calc((1170px - 60px) / 3);
   cursor: pointer;
   overflow: hidden;
+  transition: box-shadow 250ms linear; /* transition - одной строкой */
 }
 
 .work-list:not(:nth-child(3n)) {
@@ -186,7 +187,7 @@ header {
   transform: translateY(-100%);
 }
 
-.work-list:hover .card-content {
+.work-list:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
